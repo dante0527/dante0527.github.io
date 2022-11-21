@@ -42,11 +42,6 @@ ul {
     color: black;
 }
 
-.flex-container {
-    display: flex;
-
-}
-
 .imgbox {
     display: grid;
     height: 50%;

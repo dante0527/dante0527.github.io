@@ -17,15 +17,3 @@ ul {
     list-style: none;
     padding-left: 0;
 }​
-
-.imgbox {
-    display: grid;
-    height: 50%;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
