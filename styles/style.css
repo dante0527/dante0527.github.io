@@ -1,19 +1,21 @@
 * {
+    background: rgb(34, 39, 46);
     box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif
 }
 
-h1 {
-    text-align: center;
-    color: rgb(45, 201, 144)
+a {
+    color: rgb(0, 195, 255);
 }
 
-h2 {
+h1, h2, h3 {
     text-align: center;
+    color: white;
 }
 
 p {
     text-align: center;
-    color: red;
+    color: rgb(255, 0, 255);
 }
 
 ul {
@@ -22,29 +24,37 @@ ul {
     padding-left: 0;
 }
 
+img {
+    padding: 10px 10px;
+    width:400px;
+    height:auto;
+}
+
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    background-color: rgb(95, 95, 95);
+    background-color: rgb(122, 122, 122);
 }
 
 .navbar a {
     color: white;
-    padding: 14px 20px;
+    background-color: rgb(122, 122, 122);
+    padding: 10px 20px;
     text-decoration: none;
     text-align: center;
 }
 
 .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: rgb(34, 39, 46);
+    color: white;
 }
 
 .imgbox {
     display: grid;
     height: 50%;
+    padding: 10px 10px;
 }
 
 .center {
@@ -52,4 +62,5 @@ ul {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    text-align: center;
 }
