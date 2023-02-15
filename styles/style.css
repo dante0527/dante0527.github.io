@@ -73,6 +73,16 @@ img {
     padding-top: 33.75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
+@media (max-width: 1000px) {
+    .container {
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        width: 95%;
+        padding-top: 53.44%;
+    }
+}
+
 .responsive-iframe {
     position: absolute;
     top: 0;
@@ -83,12 +93,3 @@ img {
     height: 100%;
 }
 
-@media (max-width: 1000px) {
-    .container {
-        margin: auto;
-        position: relative;
-        overflow: hidden;
-        width: 95%;
-        padding-top: 53.44%;
-    }
-}
