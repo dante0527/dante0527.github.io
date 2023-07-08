@@ -10,51 +10,91 @@
     <meta property="og:title" content="dante.fun" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.dante.fun" />
-    <meta property="og:image" content="images/etc/preview.jpg" />
+    <meta property="og:image" content="res/preview.jpg" />
     
     <!--style-->
     <link rel="stylesheet" href="styles/style.css"/>
     
     <!--favicon-->
-    <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="res/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="res/favicon.ico"/>
+    <link rel="apple-touch-icon" href="res/favicon.ico">
   </head>
   
   <body>
+
     <!--navbar-->
-    <div class="navbar">
-      <h2><a href="index.html" id="nav-home">home</a></h2>
-      <h2><a href="error.html" id="nav-artists">artists</a></h2>
-      <h2><a href="error.html" id="nav-about">error</a></h2>
+    <div id="nav">
+
+      <!--site header-->
+      <h1>dante.fun</h1>
+      <p>est nov 2022</p>
+
+      <!--navigation-->
+      <table>
+        <tr>
+          <td><a href="index.html">home</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="about.html">about</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="blog.html">blog</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="recipes.html">recipes</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/dante0527" target="_blank">github</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="https://steamcommunity.com/id/HawtCoco/" target="_blank">steam</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><span id="discord" class="link">discord</span></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="tia.html">tia</a></td>
+        </tr>
+      </table>
+
+      <br>
+
+      <!--reveal discord on mouseover-->
+      <script>
+        const discord = document.getElementById("discord");
+
+        discord.addEventListener("mouseover", function() {
+          discord.textContent = "dantexx";
+        });
+
+        discord.addEventListener("mouseout", function() {
+          discord.textContent = "discord";
+        });
+      </script>
+
     </div>
 
-    <!--button-->
-    <p>
-      the awesome button
-    </p>
-    <br>
-    <div class="toggle">
-      <input type="checkbox" class="check">
-      <b class="b switch"></b>
-      <b class="b track"></b>
-    </div>
-    <br><br>
+    <!--blinkies-->
+    <marquee behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();">
+      <img src="blinkies/meds.gif">
+    </marquee>
 
-    <!--heading-->
-    <center>
-      <div class="container">
-        <iframe class="responsive-iframe"
-          src="https://www.youtube.com/embed/ug1zlCW9i5Q">
-        </iframe>
-      </div>
-    </center>
+    <div id="main">
+
+      <table>
+        <tr>
+          <td><img src="images/etc/me.jpg" style="height:128px; width:auto;"></td>
+          <td>
+            Hello, I am <b><a href="https://www.dante.fun">Dante</a></b>! Welcome to my website.
+            I am a college student in the US studying
+            <span class="alt">Computer and Data Science</span>.
+            I like to do a lot of different things, which you can learn about here!
+          </td>
+        </tr>
+      </table>
     
-    <!--message-->
-    <p>
-      --PROMOTED VIDEO--
-    </p>
+    </div>
     
+    
+    
+
+    
+
     <!--GALLERIES-->
     <h2>galleries</h2>
     <div class="center">
@@ -72,6 +112,7 @@
 
     <!--SPLASH-->
     <h1>PROMOTIONAL ART</h1>
+
     <div class="image">
       <img class="center" src="images/etc/palette.jpg" alt="palette" style="width:400px;height:auto;"/>
       <img class="center" src="images/etc/fun2.jpg" alt="slpash art" style="width:400px;height:auto;"/>
