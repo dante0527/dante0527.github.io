@@ -129,7 +129,7 @@ img {
 @media (max-width: 500px) {
   #nav,
   #main {
-    width: 95%;
+    width: 100%;
   }
 
   .card {
