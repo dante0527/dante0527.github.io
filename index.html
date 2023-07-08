@@ -23,95 +23,144 @@
   
   <body>
 
-    <!--navbar-->
-    <div id="nav">
+    <div style="display:flex;">
+      <p id="date">&nbsp;est nov 2022</p>
+      <!--navbar-->
+      <div id="nav">
 
-      <!--site header-->
-      <h1>dante.fun</h1>
-      <p>est nov 2022</p>
+        <!--site header-->
+        <h1>dante.fun</h1>
+        
+        <!--navigation-->
+        <table>
+          <tr>
+            <td><a href="index.html">home</a></td>
+            <td>&nbsp;|&nbsp;</td>
+            <td><a href="about.html">about</a></td>
+            <td>&nbsp;|&nbsp;</td>
+            <td><a href="blog.html">blog</a></td>
+            <td>&nbsp;|&nbsp;</td>
+            <td><a href="recipes.html">recipes</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/dante0527" target="_blank">github</a></td>
+            <td>&nbsp;|&nbsp;</td>
+            <td><a href="https://steamcommunity.com/id/HawtCoco/" target="_blank">steam</a></td>
+            <td>&nbsp;|&nbsp;</td>
+            <td><span id="discord" class="link">discord</span></td>
+            <td>&nbsp;|&nbsp;</td>
+            <td><a href="tia.html">tia</a></td>
+          </tr>
+        </table>
 
-      <!--navigation-->
-      <table>
-        <tr>
-          <td><a href="index.html">home</a></td>
-          <td>&nbsp;|&nbsp;</td>
-          <td><a href="about.html">about</a></td>
-          <td>&nbsp;|&nbsp;</td>
-          <td><a href="blog.html">blog</a></td>
-          <td>&nbsp;|&nbsp;</td>
-          <td><a href="recipes.html">recipes</a></td>
-        </tr>
-        <tr>
-          <td><a href="https://github.com/dante0527" target="_blank">github</a></td>
-          <td>&nbsp;|&nbsp;</td>
-          <td><a href="https://steamcommunity.com/id/HawtCoco/" target="_blank">steam</a></td>
-          <td>&nbsp;|&nbsp;</td>
-          <td><span id="discord" class="link">discord</span></td>
-          <td>&nbsp;|&nbsp;</td>
-          <td><a href="tia.html">tia</a></td>
-        </tr>
-      </table>
+        <br>
 
-      <br>
+        <!--reveal discord on mouseover-->
+        <script>
+          const discord = document.getElementById("discord");
 
-      <!--reveal discord on mouseover-->
-      <script>
-        const discord = document.getElementById("discord");
+          discord.addEventListener("mouseover", function() {
+            discord.textContent = "dantexx";
+          });
 
-        discord.addEventListener("mouseover", function() {
-          discord.textContent = "dantexx";
-        });
+          discord.addEventListener("mouseout", function() {
+            discord.textContent = "discord";
+          });
+        </script>
 
-        discord.addEventListener("mouseout", function() {
-          discord.textContent = "discord";
-        });
-      </script>
-
+      </div>
+      <p id="date">&nbsp;est nov 2022</p>
     </div>
 
     <!--blinkies-->
-    <marquee behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();">
+    <marquee id="blinkies" behavior="alternate" onmouseover="this.stop();" onmouseout="this.start();">
       <img src="blinkies/meds.gif">
+      <img src="blinkies/construct.gif">
+      <img src="blinkies/plants.gif">
     </marquee>
 
     <div id="main">
 
-      <table>
+      <!--ID card-->
+      <table class="card">
         <tr>
           <td><img src="images/etc/me.jpg" style="height:128px; width:auto;"></td>
           <td>
-            Hello, I am <b><a href="https://www.dante.fun">Dante</a></b>! Welcome to my website.
+            Hello, I am <b><a href="https://www.dante.fun">Dante</a></b>!
+            Welcome to my website.
             I am a college student in the US studying
             <span class="alt">Computer and Data Science</span>.
             I like to do a lot of different things, which you can learn about here!
           </td>
         </tr>
       </table>
-    
-    </div>
-    
-    
-    
+      
+      <h3>Skills</h3>
+      <ul>
+        <li>
+          <span class="alt">Experienced</span>
+          with
+          <span class="alt">Python</span>
+          for
+          <span class="alt">algorithm design</span>
+          and
+          <span class="alt">automation</span>
+        </li>
+        <li>
+          <span class="alt">Focused</span>
+          on practicing
+          <span class="alt">data science</span>
+          in creative ways
+        </li>
+      </ul>
 
-    
+      <h3>Interests</h3>
+      <ul>
+        <li>Plants</li>
+        <li>Climbing</li>
+      </ul>
+      
+      <h3>Creations</h3>
+      <ul>
+        <li>Zyn Code Generator</li>
+        <ul>
+          <li>
+            This is an algorithm that intakes a list of real codes and trains a data
+            model with positional character weights to generate realistic replications of
+            the codes.
+          </li>
+        </ul>
+      </ul>
 
-    <!--GALLERIES-->
-    <h2>galleries</h2>
-    <div class="center">
-      <ul><a href="dante.html" id="dante">dante</a><br></ul>
-      <ul><a href="derek.html" id="derek">derek</a><br></ul>
-      <!--<ul><a href="error.html" id="cpf">cpf</a><br></ul>-->
+      <h3>Current Projects</h3>
+      <p>I'm currently working on...</p>
+      <ul>
+        <li><a href="https://www.dante.fun">This website</a></li>
+        <li>A website for someone else</li>
+      </ul>
+
+      <br>
     </div>
-    
-    <!--PAGES-->
-    <h2>fun projects</h2>
-    <ul><a href="cheeseCorner.html">Cheese Corner</a></ul>
-    <ul><a href="fool.html">Fools Page</a></ul>
-    <ul><a href="error.html">DANGER</a></ul>
-    <!--<ul><a href="tia.html" id="tia">tia</a></ul>-->
+  
+    <br>
+    <div style="background:var(--bg); text-align:center; justify-content:center; align-items:center; width:300px; margin-left:auto; margin-right:auto; padding:10px;">
+      <!--GALLERIES-->
+      <h2>galleries</h2>
+      <div class="center">
+        <ul><a href="dante.html" id="dante">dante</a><br></ul>
+        <ul><a href="derek.html" id="derek">derek</a><br></ul>
+        <!--<ul><a href="error.html" id="cpf">cpf</a><br></ul>-->
+      </div>
+      
+      <!--PAGES-->
+      <h2>fun projects</h2>
+      <ul><a href="cheeseCorner.html">Cheese Corner</a></ul>
+      <ul><a href="fool.html">Fools Page</a></ul>
+      <ul><a href="error.html">DANGER</a></ul>
+    </div>
 
     <!--SPLASH-->
-    <h1>PROMOTIONAL ART</h1>
+    <h1 style="background:var(--bg);">PROMOTIONAL ART</h1>
 
     <div class="image">
       <img class="center" src="images/etc/palette.jpg" alt="palette" style="width:400px;height:auto;"/>

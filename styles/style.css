@@ -1,12 +1,13 @@
 :root {
-  --primary: #6f4a8e;
-  --secondary: #aa7bb1;
+  --primary: #0011ff;
+  --secondary: #e540ff;
   --accent: #af6c8e;
-  --bg: #f5f5f5;
-  --bg-alt: #eaeaea;
+  --bg: #1c2450;
+  --bg-alt: #0f1936;
   --fg: #333333;
-  --text-primary: #333333;
-  --text-secondary: #6f4a8e;
+  --text-primary: #ffffff;
+  --text-secondary: #f198fd;
+  --link: #c9a400;
 }
 
 @font-face {
@@ -18,10 +19,10 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  background: var(--bg);
   width: 800px;
   margin-left: auto;
   margin-right: auto;
+  background: var(--bg);
 }
 
 #nav table {
@@ -29,33 +30,79 @@
 }
 
 #main {
-  width: 670px;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
   background: var(--bg);
+  padding: 10px;
+}
+
+#date {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  color: var(--accent)
+}
+
+.card {
+  text-align: left;
+  background: var(--bg-alt);
+}
+
+.alt {
+  color: var(--text-secondary);
+}
+
+.link {
+  color: var(--link);
+}
+
+a:hover, .link:hover {
+	color: var(--alt-2);
 }
 
 h1 {
   font-size: 50px;
 }
 
+h2, h3, h4 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+h2::after, h3::after, h4::after {
+  content: "";
+  flex: 1;
+  margin-left: 1rem;
+  height: 3px;
+  background: rgb(17,17,23);
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+  height: 2px;
+}
+
 a {
-    text-decoration: none;
-    color: rgb(140, 0, 255);
+  text-decoration: none;
+  color: var(--link);
 }
 
 body {
   font-family: "JetBrains Mono";
   font-size: 20px;
+  color: var(--text-primary);
   background-image: url("../res/starry.gif");
   background-attachment: fixed;
   background-repeat: repeat;
 }
 
 ul {
-  text-align: center;
-  list-style: none;
-  padding-left: 0;
+	list-style: none;
+}
+
+ul li:before {
+	content: '> ';
+	font-weight: bold;
 }
 
 img {
@@ -64,118 +111,36 @@ img {
   height:auto;
 }
 
-.alt {
-  color: var(--text-secondary);
-}
-
-.link {
-  color: rgb(140, 0, 255);
-}
-
-.imgbox {
-    display: grid;
-    height: 50%;
-    padding: 10px 10px;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    text-align: center;
-}
-
-.container {
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    width: 60%;
-    padding-top: 33.75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-}
-
-@media (max-width: 1000px) {
-    .container {
-        margin: auto;
-        position: relative;
-        overflow: hidden;
-        width: 95%;
-        padding-top: 53.44%;
-    }
-}
-
-.responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.b {
-  display: block;
-}
-
-.toggle {
-  position: absolute;
-  left: 50%;
-  width: 60px;
-  height: 40px;
-  border-radius: 100px;
-  background-color: #ddd;
-  margin: -20px -40px;
-  overflow: hidden;
-  box-shadow: inset 0 0 2px 1px rgba(0,0,0,.05);
-}
-
-.check {
-  position: absolute;
-  display: block;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 6;
-}
-
-  .check:checked ~ .track {
-    box-shadow: inset 0 0 0 20px #4bd863;
+@media (max-width: 800px) {
+  #nav,
+  #main {
+    width: 90%;
   }
 
-  .check:checked ~ .switch {
-    right: 2px;
-    left: 22px;
-    transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-    transition-property: left, right;
-    transition-delay: .05s, 0s;
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px auto;
   }
-
-.switch {
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  bottom: 2px;
-  right: 22px;
-  background-color: #fff;
-  border-radius: 36px;
-  z-index: 1;
-  transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  transition-property: left, right;
-  transition-delay: 0s, .05s;
-  box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 
-.track {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  box-shadow: inset 0 0 0 2px rgba(0,0,0,.05);
-  border-radius: 40px;
+/* Adjustments for even smaller screens */
+@media (max-width: 500px) {
+  #nav,
+  #main {
+    width: 95%;
+  }
+
+  .card {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .image img {
+    width: 300px;
+  }
 }
