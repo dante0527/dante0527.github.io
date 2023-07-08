@@ -140,7 +140,8 @@ img {
     font-size: 40px;
   }
 
-  .image img {
-    width: 300px;
+  img {
+    width: 80vw;
+    height: auto;
   }
 }
