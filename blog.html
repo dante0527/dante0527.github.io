@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+  <head>
+    <!--meta-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <title>dante.fun</title>
+    
+    <!--link-preview-->
+    <meta property="og:title" content="dante.fun" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.dante.fun" />
+    <meta property="og:image" content="res/preview.jpg" />
+    
+    <!--style-->
+    <link rel="stylesheet" href="styles/style.css"/>
+    
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="res/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="res/favicon.ico"/>
+    <link rel="apple-touch-icon" href="res/favicon.ico">
+  </head>
+  
+  <body>
+
+    <!--navbar-->
+    <div id="nav">
+
+      <!--site header-->
+      <h1>dante.fun</h1>
+      
+      <!--navigation-->
+      <table>
+          <tr>
+          <td><a href="index.html">home</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="error.html">about</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="blog.html">blog</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="error.html">recipes</a></td>
+          </tr>
+          <tr>
+          <td><a href="https://github.com/dante0527" target="_blank">github</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="https://steamcommunity.com/id/HawtCoco/" target="_blank">steam</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><span id="discord" class="link">discord</span></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="tia.html">tia</a></td>
+          </tr>
+      </table>
+
+      <br>
+
+    <!--reveal discord on mouseover-->
+      <script>
+          const discord = document.getElementById("discord");
+          
+          discord.addEventListener("mouseover", function() {
+          discord.textContent = "unavail";
+          });
+          
+          discord.addEventListener("mouseout", function() {
+          discord.textContent = "discord";
+          });
+      </script>
+
+    </div>
+
+    <br>
+
+    <div id="main">
+
+      <h3>Plants</h3>
+      <br>
+      Plants I own...
+      <table>
+        <tr>
+          <td><i>Alocasia Frydek</i></td>
+          <td><img src="images/etc/dedavisgn.jpg" style="height:400px;width:auto;"></td>
+        </tr>
+        <tr>
+          <td><i>Pilea Pepperomoides</i></td>
+          <td><img src="images/etc/dedavisgn.jpg" style="height:400px;width:auto;"></td>
+        </tr>
+      </table>
+
+      <h3>Climbing</h3>
+      <br>
+      Top Rope
+      <ul>
+        <li>Best Grade: 5.11d</li>
+      </ul>
+      Bouldering
+      <ul>
+        <li>Best Grade: V3</li>
+      </ul>
+      
+      <br>
+    </div>
+ 
+
+  </body>
+</html>

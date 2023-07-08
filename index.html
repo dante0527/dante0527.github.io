@@ -22,53 +22,49 @@
   </head>
   
   <body>
+    <!--navbar-->
+    <div id="nav">
 
-    <div style="display:flex;">
-      <!--navbar-->
-      <div id="nav">
+      <!--site header-->
+      <h1>dante.fun</h1>
+      
+      <!--navigation-->
+      <table>
+        <tr>
+          <td><a href="index.html">home</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="error.html">about</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="blog.html">blog</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="error.html">recipes</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/dante0527" target="_blank">github</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="https://steamcommunity.com/id/HawtCoco/" target="_blank">steam</a></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><span id="discord" class="link">discord</span></td>
+          <td>&nbsp;|&nbsp;</td>
+          <td><a href="tia.html">tia</a></td>
+        </tr>
+      </table>
 
-        <!--site header-->
-        <h1>dante.fun</h1>
-        
-        <!--navigation-->
-        <table>
-          <tr>
-            <td><a href="index.html">home</a></td>
-            <td>&nbsp;|&nbsp;</td>
-            <td><a href="error.html">about</a></td>
-            <td>&nbsp;|&nbsp;</td>
-            <td><a href="error.html">blog</a></td>
-            <td>&nbsp;|&nbsp;</td>
-            <td><a href="error.html">recipes</a></td>
-          </tr>
-          <tr>
-            <td><a href="https://github.com/dante0527" target="_blank">github</a></td>
-            <td>&nbsp;|&nbsp;</td>
-            <td><a href="https://steamcommunity.com/id/HawtCoco/" target="_blank">steam</a></td>
-            <td>&nbsp;|&nbsp;</td>
-            <td><span id="discord" class="link">discord</span></td>
-            <td>&nbsp;|&nbsp;</td>
-            <td><a href="tia.html">tia</a></td>
-          </tr>
-        </table>
+      <br>
+      
+      <!--reveal discord on mouseover-->
+      <script>
+        const discord = document.getElementById("discord");
 
-        <br>
+        discord.addEventListener("mouseover", function() {
+          discord.textContent = "unavail";
+        });
 
-        <!--reveal discord on mouseover-->
-        <script>
-          const discord = document.getElementById("discord");
+        discord.addEventListener("mouseout", function() {
+          discord.textContent = "discord";
+        });
+      </script>
 
-          discord.addEventListener("mouseover", function() {
-            discord.textContent = "unavail";
-          });
-
-          discord.addEventListener("mouseout", function() {
-            discord.textContent = "discord";
-          });
-        </script>
-
-      </div>
-      <p id="date">&nbsp;est nov 2022</p>
     </div>
 
     <!--blinkies-->
@@ -117,6 +113,7 @@
       <ul>
         <li>Plants</li>
         <li>Climbing</li>
+        <li>Travel (i love trains!)</li>
       </ul>
       
       <h3>Creations</h3>
