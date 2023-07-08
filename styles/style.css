@@ -123,6 +123,11 @@ img {
     align-items: center;
     margin: 5px auto;
   }
+  
+  img {
+    width: 80vw;
+    height: auto;
+  }
 }
 
 /* Adjustments for even smaller screens */
